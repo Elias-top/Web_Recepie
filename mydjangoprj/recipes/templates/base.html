@@ -10,10 +10,21 @@
 <body>
     <header>
         <h1>Добро пожаловать на сайт рецептов</h1>
+        <a>Добро пожаловать, {{request.user.username}}</a>
         <nav>
             <ul>
                 <li><a href="{% url 'index' %}">Главная</a></li>
                 <li><a href="{% url 'add_recipe' %}">Добавить рецепт</a></li>
+                {% if request.user.is_anonymous %}
+                    <li><a href="{% url 'register' %}">Регистрация</a></li>
+                    <li><a href="{% url 'login' %}">Войти</a></li>
+                {% else %}
+                    <li><a href="{% url 'get_my_recipes' %}">Изменить свои рецепты</a></li>
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color: green;">Выход</a>
+                    <form id="logout-form" action="{% url 'logout' %}" method="post" style="display:none;">
+                        {% csrf_token %}
+                    </form>
+                {% endif %}
             </ul>
         </nav>
     </header>
@@ -25,7 +36,7 @@
     </div>
 
     <footer>
-        <p>Выполнено студент Пилипчук Илья &copy; 2024</p>
+        <p>Выполнил студент GB Пилипчук Илья &copy; 2024</p>
     </footer>
 </body>
 </html>

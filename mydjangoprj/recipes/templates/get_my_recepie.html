@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Выберите среди своих рецептов те, которые нужно изменить</h1>
+  {% if recipes %}
+    <ul>
+    {% for recipe in recipes %}
+      <li><a href="{% url 'edit_recipe' recipe.id %}">{{ recipe.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p>У вас пока нет рецептов.</p>
+  {% endif %}
+{% endblock %}

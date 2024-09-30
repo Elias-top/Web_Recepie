@@ -6,6 +6,6 @@
   <p>{{ recipe.steps }}</p>
   <p>Время приготовления: {{ recipe.cooking_time }} минут</p>
   {% if recipe.image %}
-    <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}">
+    <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" style="max-width: 500px; height: auto;">
   {% endif %}
 {% endblock %}

@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>{{ form.instance.id|yesno:"Редактировать рецепт,Добавить рецепт" }}</h1>
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Сохранить</button>
-  </form>
+  {% if request.user.is_authenticated %}
+    <h1>{{ form.instance.id|yesno:"Редактировать рецепт,Добавить рецепт" }}</h1>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Сохранить</button>
+    </form>
+  {%else%}
+    <h2> Для того чтобы добавить свой рецепт <a href="{% url 'login' %}">войдите</a> или <a href="{% url 'register' %}"> зарегистрируйтесь</a></h2>
+  {%endif%}
 {% endblock %}
