@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc228eee-4841-4376-a100-acbfff01e84d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mydjangoprj/media/recipes/pancakes.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mydjangoprj/media/recipes/karbanara.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mydjangoprj/media/recipes/pizza.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mydjangoprj/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/templates/add_recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/add_recipe.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/templates/edit_recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/edit_recipe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/templates/recipe_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/recipe_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

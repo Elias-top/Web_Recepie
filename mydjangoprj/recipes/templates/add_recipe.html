@@ -5,6 +5,14 @@
     <form method="post" enctype="multipart/form-data">
       {% csrf_token %}
       {{ form.as_p }}
+
+      <h3>Выберите категории:</h3>
+      {% for category in categories %}
+          <label>
+              <input type="checkbox" name="categories" value="{{ category.id }}">
+              {{ category.name }}
+          </label><br>
+      {% endfor %}
       <button type="submit">Сохранить</button>
     </form>
   {%else%}

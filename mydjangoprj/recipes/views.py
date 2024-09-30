@@ -7,7 +7,7 @@ from django.urls import reverse_lazy
 from django.views import generic
 
 from .forms import RecipeForm
-from .models import Recipe
+from .models import Recipe, RecipeCategory, Category
 import random
 
 def index(request):
@@ -25,10 +25,17 @@ def add_recipe(request):
             recipe = form.save(commit=False)
             recipe.author = request.user
             recipe.save()
+            # Сохраняем связи с категориями
+            selected_categories = request.POST.getlist('categories')  # Получаем выбранные категории из POST-запроса
+            for category_id in selected_categories:
+                category = Category.objects.get(id=category_id)
+                RecipeCategory.objects.create(recipe=recipe, category=category)  # Создаем связь между рецептом и категорией
+
             return redirect('recipe_detail', recipe_id=recipe.id)
     else:
         form = RecipeForm()
-    return render(request, 'add_recipe.html', {'form': form})
+    categories = Category.objects.all()  # Получаем все категории
+    return render(request, 'add_recipe.html', {'form': form, 'categories': categories})
 
 def get_my_recipes(request):
     recipes = Recipe.objects.filter(author = request.user).order_by('title')
@@ -40,11 +47,22 @@ def edit_recipe(request, recipe_id):
         form = RecipeForm(request.POST, request.FILES, instance=recipe)
         if form.is_valid():
             form.save()
+
+            # Удаляем старые связи и создаем новые
+            RecipeCategory.objects.filter(recipe=recipe).delete()  # Удаляем старые категории
+            selected_categories = request.POST.getlist('categories')  # Получаем выбранные категории
+            for category_id in selected_categories:
+                category = Category.objects.get(id=category_id)
+                RecipeCategory.objects.create(recipe=recipe, category=category)  # Создаем связь между рецептом и категорией
             return redirect('recipe_detail', recipe_id=recipe.id)
     else:
         form = RecipeForm(instance=recipe)
 
-    return render(request, 'edit_recipe.html', {'form': form, 'recipe': recipe})
+    categories = Category.objects.all()  # Получаем все категории
+    selected_categories = recipe.recipecategory_set.values_list('category_id', flat=True)  # Получаем связанные категории
+
+    return render(request, 'edit_recipe.html', {'form': form, 'recipe': recipe, 'categories': categories,
+                                                'selected_categories': selected_categories})
 
 class RegisterView(generic.CreateView):
     form_class = UserCreationForm
