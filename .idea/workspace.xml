@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc228eee-4841-4376-a100-acbfff01e84d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mydjangoprj/media/recipes/dranicas.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mydjangoprj/media/recipes/omlet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/edit_recipe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/get_my_recepie.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/registration/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mydjangoprj/media/recipes/pancakes.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mydjangoprj/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydjangoprj/mydjangoprj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/mydjangoprj/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/templates/add_recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/add_recipe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/templates/recipe_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/recipe_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/templates/edit_recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/edit_recipe.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

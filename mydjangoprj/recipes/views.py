@@ -31,7 +31,7 @@ def add_recipe(request):
     return render(request, 'add_recipe.html', {'form': form})
 
 def get_my_recipes(request):
-    recipes = Recipe.objects.all().order_by('title')
+    recipes = Recipe.objects.filter(author = request.user).order_by('title')
     return render(request, 'get_my_recepie.html', {'recipes': recipes})
 def edit_recipe(request, recipe_id):
     recipe = get_object_or_404(Recipe, id=recipe_id)

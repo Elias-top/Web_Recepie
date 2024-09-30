@@ -2,12 +2,14 @@
 
 {% block content %}
   <h2>Редактирование рецепта: {{ recipe.title }}</h2>
-  
-  <form method="POST" enctype="multipart/form-data">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit" class="btn btn-primary">Сохранить изменения</button>
-  </form>
-
+{% if request.user.is_authenticated %}
+      <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+      </form>
+{%else%}
+    <h2> Для того чтобы отредактировать свой рецепт <a href="{% url 'login' %}">войдите</a> или <a href="{% url 'register' %}"> зарегистрируйтесь</a></h2>
+{%endif%}
   <a href="{% url 'recipe_detail' recipe.id %}">Назад к рецепту</a>
 {% endblock %}
