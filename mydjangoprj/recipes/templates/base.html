@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Сайт с рецептами{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на сайт рецептов</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Главная</a></li>
+                <li><a href="{% url 'add_recipe' %}">Добавить рецепт</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        {% block content %}
+        <!-- Здесь будет динамический контент -->
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p>Выполнено студент Пилипчук Илья &copy; 2024</p>
+    </footer>
+</body>
+</html>

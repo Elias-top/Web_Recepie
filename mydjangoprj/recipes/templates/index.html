@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Главная страница</h1>
+  <ul>
+  {% for recipe in recipes %}
+    <li><a href="{% url 'recipe_detail' recipe.id %}">{{ recipe.title }}</a></li>
+  {% endfor %}
+  </ul>
+{% endblock %}
