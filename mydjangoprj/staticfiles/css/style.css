@@ -1,0 +1,102 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #343a40;
+    color: green;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+h1{
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    padding: 20px;
+    background-color: white;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #343a40;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    max-width: 600px; /* Ограничение максимальной ширины формы */
+    margin: 0 auto; /* Центрирование формы */
+    padding: 20px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Граница формы */
+    border-radius: 5px; /* Закругленные углы */
+    background-color: #f8f9fa; /* Фоновый цвет формы */
+}
+
+form p {
+    margin-bottom: 15px; /* Отступ между полями формы */
+}
+
+label {
+    font-weight: bold; /* Жирный шрифт для меток */
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%; /* Ширина 100% для полей ввода */
+    padding: 10px; /* Внутренний отступ */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 4px; /* Закругленные углы */
+}
+
+input[type="file"] {
+    padding: 5px; /* Внутренний отступ для поля загрузки файла */
+}
+
+button {
+    margin-top: 10px; /* Отступ сверху для кнопки */
+}
