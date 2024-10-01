@@ -1,9 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
   <h1>Главная страница</h1>
+  <h2>5 случайных рецептов:</h2>
   <ul>
-  {% for recipe in recipes %}
+  {% for recipe in rnd_recipes %}
     <li><a href="{% url 'recipe_detail' recipe.id %}">{{ recipe.title }}</a></li>
   {% endfor %}
   </ul>
+
+<h2>Выберите категорию для просмотра рецептов</h2>
+
+<form method="POST" action="{% url 'index' %}">
+    {% csrf_token %}
+    <label for="category">Выберите категорию:</label>
+    <select name="category" id="category">
+        {% for category in categories %}
+            <option value="{{ category.id }}">{{ category.name }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Показать рецепты</button>
+</form>
+
+{% if recipes %}
+    <h2>Рецепты для выбранной категории:</h2>
+    <ul>
+        {% for recipe in recipes %}
+            <li>
+                <a href="{% url 'recipe_detail' recipe.id %}">{{ recipe.title }}</a>
+            </li>
+        {% empty %}
+            <li>Рецептов для этой категории пока нет.</li>
+        {% endfor %}
+    </ul>
+{%else%}
+    <h3>Выберите рецепты по категориям, которые необходимо показать</h3>
+{% endif %}
+
 {% endblock %}

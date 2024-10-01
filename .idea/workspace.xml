@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc228eee-4841-4376-a100-acbfff01e84d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mydjangoprj/media/recipes/karbanara.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mydjangoprj/media/recipes/pizza.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mydjangoprj/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/templates/add_recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/add_recipe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/templates/edit_recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/edit_recipe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/templates/recipe_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/recipe_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mydjangoprj/recipes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mydjangoprj/recipes/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,15 +37,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

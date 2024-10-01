@@ -1,4 +1,5 @@
 from django.contrib.auth.forms import UserCreationForm
+from django.http import HttpResponseForbidden
 from django.shortcuts import render, get_object_or_404, redirect
 
 # Create your views here.
@@ -11,8 +12,19 @@ from .models import Recipe, RecipeCategory, Category
 import random
 
 def index(request):
-    recipes = Recipe.objects.all().order_by('?')[:5]
-    return render(request, 'index.html', {'recipes': recipes})
+    rnd_recipes = Recipe.objects.all().order_by('?')[:5]
+    # Проходим по каждой категории и получаем связанные рецепты
+    categories = Category.objects.all()
+    recipes = None  # По умолчанию рецептов нет
+
+    if request.method == "POST":
+        # Получаем категорию из POST-запроса
+        category_id = request.POST.get('category')
+        category = get_object_or_404(Category, id=category_id)
+        # Находим рецепты, связанные с выбранной категорией
+        recipes = Recipe.objects.filter(recipecategory__category=category)
+
+    return render(request, 'index.html', {'rnd_recipes': rnd_recipes, 'categories': categories, 'recipes': recipes})
 
 def recipe_detail(request, recipe_id):
     recipe = get_object_or_404(Recipe, id=recipe_id)
@@ -42,6 +54,9 @@ def get_my_recipes(request):
     return render(request, 'get_my_recepie.html', {'recipes': recipes})
 def edit_recipe(request, recipe_id):
     recipe = get_object_or_404(Recipe, id=recipe_id)
+    # Проверяем, является ли текущий пользователь автором рецепта
+    if recipe.author != request.user:
+        return HttpResponseForbidden("Вы не являетесь автором этого рецепта")
 
     if request.method == 'POST':
         form = RecipeForm(request.POST, request.FILES, instance=recipe)
